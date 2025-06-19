@@ -1,0 +1,25 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    if (num < 0 || num > 9) {
+        printf("Invalid Input");
+        return 0;
+    }
+
+    int square = num * num;
+    if (square % 10 == num)
+        printf("Automorphic Number");
+    else
+        printf("Not Automorphic Number");
+
+    return 0;
+}
