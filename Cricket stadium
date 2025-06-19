@@ -1,0 +1,21 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    
+
+    int length, breadth;
+    scanf("%d%d", &length, &breadth);
+    int rope_length = 2 * (length + breadth);
+    int carpet_area = length * breadth;
+    printf("%d\n%d", rope_length, carpet_area);
+    return 0;
+}
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+   
