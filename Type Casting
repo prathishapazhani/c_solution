@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a;
+    char b;
+    scanf("%d\n%c\n",&a,&b);
+    printf("Integer of %d is %c\n",a,(char)a);
+    printf("Character of %c is %d",b,(int)b);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
