@@ -1,0 +1,16 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    float a;
+    scanf("%f",&a);
+    printf("%.6f\n%.4f\n%.2f\n%.0f",a,a,a,a);
+    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
