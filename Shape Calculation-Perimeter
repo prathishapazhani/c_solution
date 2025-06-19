@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int square_side, rect_length, rect_width, base1, side, base2;
+    float PI=3.1415;
+    int circle_radius;
+    scanf("%d%d%d%d%d%d%d", &square_side, &rect_length, &rect_width, &circle_radius, &base1, &side, &base2);
+    int perimeter_square = 4 * square_side;
+    int perimeter_rectangle = 2 * (rect_length + rect_width);
+    float perimeter_circle = 2 * PI * circle_radius;
+    int perimeter_triangle = base1 + side + base2;
+    printf("Perimeter of Square:%d\n", perimeter_square);
+    printf("Perimeter of Rectangle:%d\n", perimeter_rectangle);
+    printf("Perimeter of Circle:%.2f\n", floor(perimeter_circle*100)/100);
+    printf("Perimeter of Triangle:%d", perimeter_triangle);
+    return 0;
+}
+
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+
