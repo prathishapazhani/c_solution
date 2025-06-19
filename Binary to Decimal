@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    long long binary;
+    int decimal = 0, i = 0;
+    scanf("%lld", &binary);
+
+    while (binary != 0) {
+        int digit = binary % 10;
+        decimal += digit * pow(2, i);
+        binary /= 10;
+        i++;
+    }
+
+    printf("%d\n", decimal);
+    return 0;
+}
