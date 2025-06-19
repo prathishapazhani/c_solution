@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+float a;
+    scanf("%a",&a);
+    int b=floor(a);
+    printf("%.5f\n%.4f\n%.3f\n%.2f\n%.1f\n%d",a,a,a,a,a,b);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
