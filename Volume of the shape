@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    
+
+
+    int l, b, h, r;
+float M_PI=3.141592653;
+   
+    scanf("%d", &l);  
+    scanf("%d", &b); 
+    scanf("%d", &h); 
+    scanf("%d", &r); 
+
+    
+    double volumeCuboid = l * b * h;
+    double volumeCylinder = M_PI * r * r * h;
+    double volumeCone = (M_PI * r * r * h) / 3.0;
+    double volumeSphere = (4.0 / 3.0) * M_PI * r * r * r;
+
+   
+    printf("Volume of Cubiod=%.2f\n", volumeCuboid);
+    printf("Volume of Cylinder=%.2f\n", floor(volumeCylinder*100)/100);
+    printf("Volume of Cone=%.2f\n", floor(volumeCone*100)/100);
+    printf("Volume of Shpere=%.2f\n",floor( volumeSphere*100)/100);
+
+    return 0;
+}
