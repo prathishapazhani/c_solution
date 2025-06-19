@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    int m, n;
+    scanf("%d %d", &m, &n);
+    int accounts[m][n];
+    int max_wealth = 0;
+
+    for (int i = 0; i < m; i++) {
+        int sum = 0;
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &accounts[i][j]);
+            sum += accounts[i][j];
+        }
+        if (sum > max_wealth) {
+            max_wealth = sum;
+        }
+    }
+
+    printf("Richest Customer Wealth is %d\n", max_wealth);
+
+    return 0;
+}
+
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+
