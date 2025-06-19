@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int countDigits(long long n) {
+    if (n == 0)
+        return 0;
+    return 1 + countDigits(n / 10);
+}
+
+int main() {
+    long long n;
+    scanf("%lld", &n);
+
+    if (n == 0) {
+        printf("The Count the digits: 1\n");
+    } else {
+        int count = countDigits(n);
+        printf("The Count the digits: %d\n", count);
+    }
+
+    return 0;
+}
+
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
