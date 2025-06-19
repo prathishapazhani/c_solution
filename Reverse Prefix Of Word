@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char word[251], ch;
+    scanf("%s", word);
+    scanf(" %c", &ch);
+
+    int i, idx = -1;
+    for (i = 0; word[i] != '\0'; i++) {
+        if (word[i] == ch) {
+            idx = i;
+            break;
+        }
+    }
+
+    if (idx != -1) {
+        for (i = idx; i >= 0; i--) {
+            putchar(word[i]);
+        }
+        printf("%s\n", word + idx + 1);
+    } else {
+        printf("%s\n", word);
+    }
+
+    return 0;
+}
+
+
+ 
