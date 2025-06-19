@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define PI 3.14159265358979323846
+int main() {
+    int side, length, breadth, base, height;
+    float radius;
+
+    
+    scanf("%d", &side);         // Input for square side
+    scanf("%d", &length);       // Input for rectangle length
+    scanf("%d", &breadth);      // Input for rectangle breadth
+    scanf("%f", &radius);       // Input for circle radius
+    scanf("%d", &base);         // Input for triangle base
+    scanf("%d", &height);       // Input for triangle height
+
+ 
+    int area_square = side * side;
+    int area_rectangle = length * breadth;
+    float area_circle = PI * radius * radius;
+    float area_triangle = 0.5 * base * height;
+
+ 
+    printf("Area of Square=%d\n", area_square);
+    printf("Area of Rectangle=%d\n", area_rectangle);
+    printf("Area of Circle=%.2f\n", floor((area_circle)*100)/100);
+    printf("Area of Triangle=%.0f\n", area_triangle);
+
+ 
+
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
