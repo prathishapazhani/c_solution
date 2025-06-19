@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[1000];
+    int i = 0;
+
+    fgets(str, sizeof(str), stdin);
+
+    int capitalize = 1;
+
+    while (str[i] != '\0' && str[i] != '\n') {
+        if (str[i] == ' ') {
+            capitalize = 1;
+        } else {
+            if (capitalize && isalpha(str[i])) {
+                putchar(toupper(str[i]));
+                capitalize = 0;
+            } else {
+                putchar(str[i]);
+            }
+        }
+        i++;
+    }
+
+    return 0;
+}
+   
