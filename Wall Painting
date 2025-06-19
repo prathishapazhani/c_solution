@@ -1,0 +1,41 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+
+
+int max(int a, int b) {
+    return a > b ? a : b;
+}
+
+int main() {
+    int L, B;
+    int l1, b1, l2, b2;
+    scanf("%d %d %d %d %d %d", &L, &B, &l1, &b1, &l2, &b2);
+
+    int possible = 0;
+
+    if ((l1 + l2 <= L && max(b1, b2) <= B) ||
+        (max(l1, l2) <= L && b1 + b2 <= B) ||
+        (l1 + b2 <= L && max(b1, l2) <= B) ||
+        (max(l1, b2) <= L && b1 + l2 <= B) ||
+        (b1 + b2 <= L && max(l1, l2) <= B) ||
+        (max(b1, b2) <= L && l1 + l2 <= B) ||
+        (b1 + l2 <= L && max(l1, b2) <= B) ||
+        (max(b1, l2) <= L && l1 + b2 <= B))
+        possible = 1;
+
+    if (possible)
+        printf("Raj can fix both painting");
+    else
+        printf("Raj cannot fix both painting");
+
+    return 0;
+}
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    
