@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main() {
+    int length, breadth;
+    scanf("%d%d", &length, &breadth);
+    float rope = 2 * (length + breadth);
+    float carpet = length * breadth;
+    printf("Required length is %.2fm\n", rope);
+    printf("Required quantity of carpet is %.2fsqm", carpet);
+    return 0;
+}
+
