@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char s[101], goal[101], temp[201];
+    scanf("%s", s);
+    scanf("%s", goal);
+    if (strlen(s) != strlen(goal)) {
+        printf("false\n");
+        return 0;
+    }
+    strcpy(temp, s);
+    strcat(temp, s);
+    if (strstr(temp, goal)) {
+        printf("true\n");
+    } else {
+        printf("false\n");
+    }
+    return 0;
+}
