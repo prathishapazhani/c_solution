@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    
+    
+    int a,l,s=0;
+    scanf("%d",&a);
+    int n=a;
+    while(a>0)
+    {
+        l=a%10;
+        a=a/10;
+        s+=l;
+    }
+    if(n%s==0)
+        printf("Harshad Number");
+    else
+        printf("Not Harshad Number");
+}
+
