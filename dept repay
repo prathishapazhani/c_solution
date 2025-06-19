@@ -1,0 +1,19 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+
+int main() {
+    int principal, rate, years;
+    scanf("%d%d%d", &principal, &rate, &years);
+    float interest = (principal * rate * years) / 100.0;
+    float amount = principal + interest;
+    float discount = interest * 0.02;
+    float final_settlement = amount - discount;
+    printf("%.2f\n%.2f\n%.2f\n%.2f", interest, amount, discount, final_settlement);
+    return 0;
+}
