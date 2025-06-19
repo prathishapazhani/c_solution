@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    printf("Hexadecimal number is : %X\n", num);
+    return 0;
+}
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
