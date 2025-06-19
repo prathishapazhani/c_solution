@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    char s[1001];
+    scanf("%s", s);
+
+    char a = '\0', b = '\0';
+    int i = 0, valid = 1;
+
+    while (s[i]) {
+        if (a == '\0') {
+            a = s[i];
+        } else if (s[i] != a && b == '\0') {
+            b = s[i];
+        } else if (s[i] != a && s[i] != b) {
+            valid = 0;
+            break;
+        }
+        i++;
+    }
+
+    if (!valid || a == b) {
+        printf("No\n");
+        return 0;
+    }
+
+    for (i = 0; s[i]; i++) {
+        if (i % 2 == 0 && s[i] != s[0]) {
+            valid = 0;
+            break;
+        }
+        if (i % 2 == 1 && s[i] == s[0]) {
+            valid = 0;
+            break;
+        }
+    }
+
+    if (valid)
+        printf("Yes\n");
+    else
+        printf("No\n");
+
+    return 0;
+}
+
+
+ 
