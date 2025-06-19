@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    char ch;
+    scanf(" %c", &ch);
+
+    if (!isalpha(ch)) {
+        printf("Invalid Input");
+        return 0;
+    }
+
+    char lower = tolower(ch);
+    if (lower == 'a' || lower == 'e' || lower == 'i' || lower == 'o' || lower == 'u')
+        printf("The Character %c is Vowel", ch);
+    else
+        printf("The Character %c is Consonant", ch);
+
+    return 0;
+}
+
